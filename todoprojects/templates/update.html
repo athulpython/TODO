@@ -1,0 +1,39 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<center>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+        <div class="banner">
+           <div class="container"><br>
+                <nav class="navbar fixed-top bg-dark">
+                <div class="container-fluid">
+                <a style="color:white" class="navbar-brand" href="#"><b>TODO</b></a>
+                </div>
+           </nav><br>
+           </div>
+            <br>
+        </div>
+    </div>
+
+  <div class="row">
+    <div class="col-md-6">
+        <nav class="navbar bg-danger">
+        <div class="container-fluid">
+        <form method="POST">
+
+        {% csrf_token %}
+
+        {{form.as_p}}
+        <button type="submit" class="btn btn-success">update</button>
+
+        </form>
+        </div>
+        </nav>
+    </div>
+  </div><br><br>
+      </div>
+</div>
+</center>
+{% endblock %}
