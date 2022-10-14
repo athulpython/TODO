@@ -1,7 +1,6 @@
 
 {% extends 'base.html' %}
 {% block content %}
-<center>
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
@@ -9,31 +8,32 @@
            <div class="container"><br>
                 <nav class="navbar fixed-top bg-dark">
                 <div class="container-fluid">
-                <a style="color:white" class="navbar-brand" href="#"><b>TODO</b></a>
+                <a style="color:white" class="navbar-brand" href="#"><b>Update Task</b></a>
                 </div>
            </nav><br>
            </div>
             <br>
         </div>
+       </div>
+
+    <form method="post">
+
+
+            <div class="card">
+               <div class="shadow card" >
+                    <div class="card-body">
+
+                          {% csrf_token %}
+                        <center>
+                             <h5> Update now ...</h5><br/>
+                                   {{form.as_p}}
+                             <button type="submit" class="btn btn-success">update</button>
+                        </center>
+                    </div>
+            </div>
+     </form>
     </div>
 
-  <div class="row">
-    <div class="col-md-6">
-        <nav class="navbar bg-danger">
-        <div class="container-fluid">
-        <form method="POST">
-
-        {% csrf_token %}
-
-        {{form.as_p}}
-        <button type="submit" class="btn btn-success">update</button>
-
-        </form>
-        </div>
-        </nav>
-    </div>
-  </div><br><br>
-      </div>
 </div>
-</center>
+
 {% endblock %}
