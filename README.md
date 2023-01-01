@@ -6,7 +6,7 @@
 
 ## Frontend
 
-- Python
+
 
 - HTML
 
@@ -19,6 +19,8 @@
 - Django 
 
 - SQLite3
+
+- Python
 
 
 
